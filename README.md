@@ -37,7 +37,7 @@ Additionally, the option to prevent abortion of deliveries is enabled in case th
 
 See: [public DistanceValidator\(int maxDistanceAllowed, boolean abortOnFail\)](https://github.com/MichaelRondon/drone/blob/6a4bb151c018305918c5f99976cac31ee8cf7c46/src/main/java/com/scad/drone/service/DistanceValidator.java#L12)
 
-## Configuraciones
+## Settings
 See constants file: [Constants](https://github.com/MichaelRondon/drone/blob/6a4bb151c018305918c5f99976cac31ee8cf7c46/src/main/java/com/scad/drone/config/Constants.java#L7-L16)
 
 ## Immutable Object
