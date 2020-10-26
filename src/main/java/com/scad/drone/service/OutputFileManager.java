@@ -62,6 +62,15 @@ public class OutputFileManager implements ResponseProcessor<String> {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(Constants.REPORT_TITLE);
         stringBuilder.append(System.lineSeparator());
+        response.getDeliveryPositions().stream()
+                .map(position ->
+                        String.format("(%s,%s) %s",
+                                position.getXCoordinate(),
+                                position.getYCoordinate(),
+                                position.getOrientation().getDescription()))
+                .forEach(s -> stringBuilder.append(s).append(System.lineSeparator()));
+
+
         if(!response.getValidationErrors().isEmpty()){
             stringBuilder.append(Constants.ERROR_REPORT);
             stringBuilder.append(System.lineSeparator());
@@ -77,13 +86,6 @@ public class OutputFileManager implements ResponseProcessor<String> {
                                 .append(System.lineSeparator()));
             });
         }
-        response.getDeliveryPositions().stream()
-                .map(position ->
-                        String.format("(%s,%s) %s",
-                                position.getXCoordinate(),
-                                position.getYCoordinate(),
-                                position.getOrientation().getDescription()))
-                .forEach(s -> stringBuilder.append(s).append(System.lineSeparator()));
         return stringBuilder.toString();
     }
 }

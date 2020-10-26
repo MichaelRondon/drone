@@ -68,7 +68,6 @@ public class Drone {
                 response.addValidationErrors(validatorResponse);
             }
             if (validatorResponse.isAbort()) {
-                response.addPosition(currentPosition);
                 this.abort();
                 return;
             }

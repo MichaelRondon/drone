@@ -10,7 +10,7 @@ public class Constants {
     public static final String OUTPUT_FILE_NAME = "out";
     public static final String OUTPUT_FILE_EXTENSION = ".txt";
     public static final String REPORT_TITLE = "== Reporte de entregas ==";
-    public static final String ERROR_REPORT = "Se encontraron errores en la entrega:";
+    public static final String ERROR_REPORT = "== Se encontraron errores en la entrega: ==";
     public static final String ABORT_REPORT = "La entrega se tuvo que abortar";
     public static final String INPUT_FILE_REGEX = "in[0-9]+\\.txt";
     public static final String FILE_IDENTIFIER_REGEX = "[0-9]+";
